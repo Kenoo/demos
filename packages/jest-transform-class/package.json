@@ -1,0 +1,24 @@
+{
+  "name": "jest-transform-class",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "czt",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/jest": "^27.0.2",
+    "babel-jest": "^27.3.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "jest": "^27.3.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "gitHead": "a5879f75bdb2b59e8bb24ceacecbe167c2331083"
+}
