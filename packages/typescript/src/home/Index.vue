@@ -1,24 +1,18 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-
-function fn(n: number) {
-  if (n > 5) {
-    return true;
-  } else {
-    return false;
-  }
-  return true;
-}
-</script>
-
 <template>
-  <span>czt</span>
+  <p>Default size of form: {{ formConfig.size }}</p>
+  <IxSpace>
+    <IxButton @click="changeFormConfig({ size: 'sm' })">Small</IxButton>
+    <IxButton @click="changeFormConfig({ size: 'md' })">Medium</IxButton>
+    <IxButton @click="changeFormConfig({ size: 'lg' })">Large</IxButton>
+  </IxSpace>
+  <IxForm>
+    <IxFormItem><IxInput /></IxFormItem>
+    <IxFormItem><IxInput /></IxFormItem>
+  </IxForm>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+import { useGlobalConfig } from '@idux/components/config'
 
-</style>
+const [formConfig, changeFormConfig] = useGlobalConfig('form', { size: 'lg' })
+</script>
