@@ -1,9 +1,10 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
-
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const {VueLoaderPlugin} = require('vue-loader/dist/index');
+import { IduxResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/webpack'
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -21,6 +22,10 @@ const config = {
     host: "localhost",
   },
   plugins: [
+    Components({
+      resolvers: [IduxResolver()],
+    }),
+    new MiniCssExtractPlugin(),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: "index.html",
