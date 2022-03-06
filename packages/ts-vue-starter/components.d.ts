@@ -4,6 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Counter: typeof import('./src/components/Counter.vue')['default']
     Hello: typeof import('./src/components/Hello.vue')['default']
     IxButton: typeof import('@idux/components/button')['IxButton']
     IxForm: typeof import('@idux/components/form')['IxForm']
