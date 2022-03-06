@@ -1,11 +1,7 @@
 <template>
-    Hello....
+    <span>{{msg}}</span>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "Hello"
-});
+<script setup lang="ts">
+const msg:string = 'czt....'
 </script>

@@ -8,11 +8,13 @@
   <IxForm>
     <IxFormItem><IxInput /></IxFormItem>
     <IxFormItem><IxInput /></IxFormItem>
+    <hello/>
   </IxForm>
 </template>
 
 <script setup lang="ts">
 import { useGlobalConfig } from '@idux/components/config'
+import Hello from './components/Hello.vue'
 
 const [formConfig, changeFormConfig] = useGlobalConfig('form', { size: 'lg' })
 </script>
